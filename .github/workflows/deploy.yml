@@ -15,6 +15,8 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          # password: ${{ secrets.SSH_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: cd ${{ secrets.PROJECT_PATH }} && ls
+          mkdir hai
       - run: echo "🍏 This job's status is ${{ job.status }}."
