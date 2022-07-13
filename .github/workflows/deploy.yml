@@ -26,7 +26,7 @@ jobs:
           # script: cd ${{ secrets.PROJECT_PATH }}
           # Copy Directory Content Recursively on Linux
           script: |
-          cd ~/ci-cd-github/sample-ci-cd
-          git pull origin main
-          cp -R ~/ci-cd-github/sample-ci-cd/* /var/www/html/sample-ci-cd/
+            cd ~/ci-cd-github/sample-ci-cd/
+            git pull origin main
+            cp -R ~/ci-cd-github/sample-ci-cd/* /var/www/html/sample-ci-cd/
       - run: echo "🍏 This job's status is ${{ job.status }}."
