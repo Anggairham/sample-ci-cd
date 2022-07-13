@@ -9,7 +9,11 @@ jobs:
   deploy:
     runs-on: [ubuntu-latest]
     steps:
+      # dimana distep pertama ini wajib ini artinya kita mau menggunakan branch mana.
+      # - name: Checkout
+      # uses: actions/checkout@master
       - uses: actions/checkout@v1
+      #  menggunakan package untuk melakukan remote ssh ke server
       - name: Push to server
         uses: appleboy/ssh-action@master
         with:
@@ -17,5 +21,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           # password: ${{ secrets.SSH_PASSWORD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           script: cd ${{ secrets.PROJECT_PATH }} && ls
       - run: echo "🍏 This job's status is ${{ job.status }}."
