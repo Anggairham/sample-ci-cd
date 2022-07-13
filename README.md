@@ -1,8 +1,12 @@
 # sample-ci-cd
 
 ### Referensi
+* https://dev.to/knowbee/how-to-setup-continuous-deployment-of-a-website-on-a-vps-using-github-actions-54im
+* https://dev.to/miangame/how-to-automate-a-deploy-in-a-vps-with-github-actions-via-ssh-101e
+* https://sivabalanb.medium.com/deploy-react-app-to-vps-digitalocean-vultr-using-git-actions-5766be8d2961
 * https://stackoverflow.com/questions/63480433/how-to-run-a-github-action-from-a-branch-other-than-master
 * https://github.com/actions/checkout/discussions/277
+
 ### Workflow
 * After a better reading of https://docs.github.com/en/actions/reference/events-that-trigger-workflows specially the last part, seems that the ./github/workflows/* must be present in all the involved branches in order to make things work as I expected
 * Workflow harus ada di branch terkait
