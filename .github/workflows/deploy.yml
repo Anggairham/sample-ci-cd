@@ -18,5 +18,4 @@ jobs:
           # password: ${{ secrets.SSH_PASSWORD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: cd ${{ secrets.PROJECT_PATH }} && ls
-          mkdir hai
       - run: echo "🍏 This job's status is ${{ job.status }}."
